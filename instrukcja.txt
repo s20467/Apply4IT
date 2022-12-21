@@ -1,0 +1,8 @@
+Aby używać aplikacji należy:
+	1. W folderze Apply4IT w konsoli użyć docker-compose up 
+		- Ważne: backend będzie kilkukrotnie zgłaszał błąd do czasu aż baza danych będzie gotowa.
+			Należy zignorować logi błędów i przeczekać (w zależności od sprzętu może to być 1-5 min) 
+	2. W przeglądarce wpisać localhost:5000
+	4. Aby zakończyć działanie wystarczy nacisnąć w konsoli Ctrl + C
+	5. Aby usunąć utworzone kontenery/image można użyć docker-compose down --rmi all
+	6. Należy jeszcze usunąć odpowiedni volume

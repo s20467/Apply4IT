@@ -1,0 +1,41 @@
+version: '3.1'
+
+services:
+  database:
+    build: 
+      context: ./database
+    image: database
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    restart: on-failure
+    ports:
+      - 3309:3306
+    volumes:
+      - "mysqldata:/var/lib/mysql"
+  backend:
+    depends_on:
+      - database
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/apply4it?allowPublicKeyRetrieval=true&serverTimezone=UTC&useSSL=false
+      SPRING_DATASOURCE_USERNAME: apply4it_user
+      SPRING_DATASOURCE_PASSWORD: password
+    build: 
+      context: ./backend
+    image: backend
+    restart: on-failure
+    ports:
+      - 8081:8080
+    links:
+      - database:database
+  frontend:
+    depends_on:
+      - backend
+    build: 
+      context: ./frontend
+    image: frontend
+    restart: on-failure
+    ports:
+      - 5000:80
+
+volumes:
+  mysqldata:
