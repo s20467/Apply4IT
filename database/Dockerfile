@@ -1,4 +1,4 @@
-FROM mysql:5.7
+FROM mysql:latest
 
 COPY ./mysql_scripts /docker-entrypoint-initdb.d
 

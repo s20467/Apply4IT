@@ -1,8 +1,8 @@
-FROM openjdk:11
+FROM openjdk:latest
 
-COPY ./Apply4it /usr/src/apply4it
+COPY ./Apply4IT-Backend /usr/src/Apply4IT-Backend
 
-WORKDIR /usr/src/apply4it
+WORKDIR /usr/src/Apply4IT-Backend
 
 EXPOSE 8080
 
