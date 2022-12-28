@@ -21,5 +21,6 @@ Apply4IT
 - Upewnij się, że sklonowane projekty mają takie same nazwy jak w wymaganej strukturze
 - W folderze głównym (Apply4IT) uruchom w konsoli polecenie ```docker compose up``` lub ```docker-compose up``` w starszych wersjach
 - Zaczekaj, aż aplikacja się uruchomi. Powinno to potrwać mniej więcej 5 min
+- Aby korzystać z aplikacji należy w przeglądarce przejść pod adres ```localhost:5000```. Nie należy dodawać żadnych dodatkowych suffixowych członów do url.
 - Zakończyć działanie aplikacji można za pomocą kombinacji klawiszy ```Ctrl + c``` 
 - Aby posprzątać po aplikacji należy usunąć wszystkie kontenery oraz volumy utworzone przez docker compose
