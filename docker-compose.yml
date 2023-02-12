@@ -5,6 +5,7 @@ services:
     build: 
       context: ./database
     image: database
+    command: --max_allowed_packet=60000000
     environment:
       MYSQL_ROOT_PASSWORD: pass
     restart: on-failure
